@@ -46,7 +46,11 @@ def update_sales(data):
     sales_worksheet.append_row(data)
     print("Worksheet updated \n")
 
+def main():
+    """ Main function to call rest of code"""
+    data = get_sales_data()
+    sales_data = [int(num) for num in data]
+    update_sales(sales_data)
 
-data = get_sales_data()
-sales_data = [int(num) for num in data]
-update_sales(sales_data)
+print("Welcome to the Love Sandwiches automation system")
+main()
